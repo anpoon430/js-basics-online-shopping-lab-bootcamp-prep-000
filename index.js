@@ -21,16 +21,13 @@ function addToCart(item) {
 
 function viewCart() {
   return cart.reduce(function(finalMsg, item, idx){
-    var and = ' and';
-    var end = ', ';
     if (idx === 0){
-      and = '';
       return finalMsg += ` ${item.itemName} at $${item.itemPrice}${end},`
+    }else if (idx === cart.length - 1){
+      return finalMsg += ` and ${item.itemName} at $${item.itemPrice}.`
     }
-    if (idx === cart.length - 1){
-      end = '.';
-      and = 'and';
-    }
+  }, 'In your cart, you have')
+    
     return finalMsg += `${and} ${item.itemName} at $${item.itemPrice}${end}`
   }, 'In your cart, you have')
 }
