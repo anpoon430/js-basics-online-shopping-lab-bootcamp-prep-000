@@ -20,7 +20,12 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  return cart.reduce
+  return cart.reduce(function(finalMsg, item, idx){
+    if (idx === cart.length - 1){
+      return finalMsg += `${item.itemName} at $${item.itemPrice}.`;
+    }
+    return finalMsg += `${item.itemName} at $${item.itemPrice}, and `
+  }, 'In your cart, you have')
   
 }
 
