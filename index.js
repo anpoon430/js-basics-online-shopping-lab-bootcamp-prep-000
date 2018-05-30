@@ -25,10 +25,10 @@ function viewCart() {
       return finalMsg += ` ${item.itemName} at $${item.itemPrice}${end},`
     }else if (idx === cart.length - 1){
       return finalMsg += ` and ${item.itemName} at $${item.itemPrice}.`
-    }
+    }return finalMsg += `${and} ${item.itemName} at $${item.itemPrice}${end}`
   }, 'In your cart, you have')
     
-    return finalMsg += `${and} ${item.itemName} at $${item.itemPrice}${end}`
+    
   }, 'In your cart, you have')
 }
 
