@@ -25,7 +25,7 @@ function viewCart() {
       return finalMsg += `${item.itemName} at $${item.itemPrice}.`;
     }
     return finalMsg += `${item.itemName} at $${item.itemPrice}, and `
-  }, 'In your cart, you have')
+  }, 'In your cart, you have ')
   
 }
 
