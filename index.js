@@ -15,12 +15,13 @@ function addToCart(item) {
  var cartItem = {itemName: name,
                 itemPrice: price
                 };
- var cart = [];
  cart.push(cartItem);
+ return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
-  // write your code here
+  return cart.reduce
+  
 }
 
 function total() {
