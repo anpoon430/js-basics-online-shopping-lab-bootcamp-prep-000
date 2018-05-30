@@ -28,6 +28,7 @@ function viewCart() {
     }
     if (idx === cart.length - 1){
       end = '.';
+      and = 'and';
     }
     return finalMsg += `${and} ${item.itemName} at $${item.itemPrice}${end}`
   }, 'In your cart, you have')
