@@ -25,6 +25,7 @@ function viewCart() {
     var end = ', ';
     if (idx === 0){
       and = '';
+      return finalMsg += ` ${item.itemName} at $${item.itemPrice}${end},`
     }
     if (idx === cart.length - 1){
       end = '.';
