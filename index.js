@@ -27,9 +27,6 @@ function viewCart() {
       return finalMsg += ` and ${item.itemName} at $${item.itemPrice}.`
     }return finalMsg += `${and} ${item.itemName} at $${item.itemPrice}${end}`
   }, 'In your cart, you have')
-    
-    
-  }, 'In your cart, you have')
 }
 
 function total() {
