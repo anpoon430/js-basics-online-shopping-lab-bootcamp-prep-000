@@ -22,9 +22,9 @@ function addToCart(item) {
 function viewCart() {
   return cart.reduce(function(finalMsg, item, idx){
     if (idx === cart.length - 1){
-      return finalMsg += `${item.itemName} at $${item.itemPrice}.`;
+      return finalMsg += `and ${item.itemName} at $${item.itemPrice}.`;
     }
-    return finalMsg += `${item.itemName} at $${item.itemPrice}, and `
+    return finalMsg += `${item.itemName} at $${item.itemPrice}, `
   }, 'In your cart, you have ')
   
 }
