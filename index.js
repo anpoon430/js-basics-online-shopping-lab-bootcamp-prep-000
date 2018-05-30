@@ -20,13 +20,16 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  if (cart.length === 0){
+    return 'Your shopping cart is empty.';
+  }
   return cart.reduce(function(finalMsg, item, idx){
     if (idx === 0){
-      return finalMsg += ` ${item.itemName} at $${item.itemPrice}${end},`
+      return finalMsg += ` ${item.itemName} at $${item.itemPrice}${end},`;
     }else if (idx === cart.length - 1){
-      return finalMsg += ` and ${item.itemName} at $${item.itemPrice}.`
-    }return finalMsg += ` and ${item.itemName} at $${ite.itemPrice},`
-  }, 'In your cart, you have')
+      return finalMsg += ` and ${item.itemName} at $${item.itemPrice}.`;
+    }return finalMsg += ` and ${item.itemName} at $${ite.itemPrice},`;
+  }, 'In your cart, you have');
 }
 
 function total() {
